@@ -1,0 +1,65 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*----VAR----*/
+/*----/VAR----*/
+/*------MIXINS-----*/
+/*-----/MIXINS------*/
+.container {
+  padding: 0px;
+  margin: 0px;
+  width: 80vw;
+  height: 120vh;
+  margin: 20px auto 20px auto;
+  border: 1px dashed;
+}
+.container .banner {
+  width: 80vw;
+  border: 1px dashed blue;
+}
+.container .banner ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.container .banner li {
+  float: left;
+}
+.container .banner li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.container .banner li a:hover:not(.active) {
+  background-color: #000;
+}
+.container .banner .active {
+  background-color: #4CAF50;
+}
+.container .news {
+  width: 40vw;
+  height: 50vh;
+  margin: 0px auto 0px auto;
+  border: 1px dashed green;
+}
+.container .movies {
+  width: 60vw;
+  height: 50vh;
+  margin: 0px auto 0px auto;
+  border: 1px dashed green;
+}
+.container .footer {
+  width: 80vw;
+  height: 10vh;
+  border: 1px dashed blue;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=primary.css.map */

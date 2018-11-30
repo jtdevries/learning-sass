@@ -1,0 +1,256 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #262626;
+}
+
+$aquaMan: url("http://oyster.ignimgs.com/wordpress/stg.ign.com/2018/07/Aquaman.jpg");
+$mortalEngines: url("https://i.redd.it/kaneapgbtcq11.jpg");
+$bumbleBee: url("https://i.imgur.com/MktKRn5.jpg:large");
+
+$font-stack: helvetica, sans-serif;
+$mainBackground: #626262;
+$dashed: 1px dashed;
+$center: 20px auto 20px auto;
+
+
+
+@mixin reset {
+  padding: 0px;
+  margin: 0px;
+}
+@mixin navBar {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover:not(.active) {
+    background-color: #000;
+  }
+  .active {
+    background-color: #000;
+  }
+}
+
+.container {
+   @include reset;
+   background-color: #626262;
+   width: 80vw;
+   height: 1380px;
+   margin: 0 auto 0 auto;
+    .bannerTop{
+      overflow: hidden;
+      width: 80vw;
+      height: 380px;
+    }
+    .banner{
+      @include navBar;
+        width: 80vw;
+        .searchBar{
+          float: right;
+          margin-top: 10px;
+          margin-right: 10px;
+          border-radius: 5px;
+        }
+        .logo {
+
+        }
+    }
+    .news {
+        display: grid;
+        width: 740px;
+        grid-template-columns: 5;
+        grid-template-rows:30px 220px 60px;
+        margin: $center;
+        .boxTitle {
+          display: flex;
+          justify-content: center;
+          grid-column: 1 / 6;
+          grid-row: 1;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+        }
+        .box1{
+          grid-column: 1;
+          grid-row: 2 / 3;
+        }
+        .box1-1{
+          display: flex;
+          font-size: 11px;
+          grid-column: 1;
+          grid-row: 3 / 4;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+            ul {
+              @include reset;
+              list-style-type: none;
+            }
+        }
+        .box2{
+          grid-column: 2;
+          grid-row: 2 / 3;
+        }
+        .box2-1{
+          display: flex;
+          font-size: 11px;
+          grid-column: 2;
+          grid-row: 3 / 4;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+            ul {
+              @include reset;
+              list-style-type: none;
+            }
+        }
+        .box3{
+          grid-column: 3;
+          grid-row: 2 / 3;
+        }
+        .box3-1{
+          display: flex;
+          font-size: 11px;
+          grid-column: 3;
+          grid-row: 3 / 4;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+            ul {
+              @include reset;
+              list-style-type: none;
+            }
+        }
+        .box4{
+          grid-column: 4;
+          grid-row: 2 / 3;
+        }
+        .box4-1{
+          display: flex;
+          font-size: 11px;
+          grid-column: 4;
+          grid-row: 3 / 4;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+            ul {
+              @include reset;
+              list-style-type: none;
+            }
+        }
+        .box5{
+          grid-column: 5;
+          grid-row: 2 / 3;
+        }
+        .box5-1{
+          display: flex;
+          font-size: 11px;
+          grid-column: 5;
+          grid-row: 3 / 4;
+          color: #fff;
+          padding: 5px;
+          background-color: #262626;
+            ul {
+              @include reset;
+              list-style-type: none;
+            }
+        }
+    }
+    .movies {
+      width: 79vw;
+      height: 575px;
+      margin: $center;
+      .movie-card {
+        background-color: #fff;
+        width: 315px;
+        margin: 10px;
+        transition: transform 0.5s;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0px 6px 10px #0f0f0f;
+        .movie-header {
+          padding: 0;
+          margin: 0;
+          height: 430px;
+          width: 100%;
+          display: block;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        .aquaMan {
+          background: $aquaMan;
+          background-size: cover;
+        }
+        .mortalEngines {
+          background: $mortalEngines;
+          background-size: cover;
+        }
+        .bumbleBee {
+          background: $bumbleBee;
+          background-size: cover;
+        }
+      }
+      .movie-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 15px #0f0f0f;
+      }
+      .movie-content {
+        padding: 20px;
+        .movie-content-header, .movie-info {
+          display: table;
+          width: 100%;
+          .movie-title {
+            font-size: 24px;
+            margin: 0;
+            display: table-cell;
+          }
+        }
+        .movie-info {
+          margin-top: 10px;
+          .info-section {
+            display: table-cell;
+            text-transform: uppercase;
+            text-align: center;
+          }
+          .info-section:first-of-type {
+            text-align: left;
+          }
+          .info-section:last-of-type {
+            text-align: right;
+          }
+          .info-section label {
+            display: block;
+            opacity: 0.5;
+            font-size: 10px;
+          }
+          .info-section span {
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      width: 80vw;
+      height: 60px;
+      background-color: #000;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
